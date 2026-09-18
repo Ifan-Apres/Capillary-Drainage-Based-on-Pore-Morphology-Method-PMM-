@@ -1,0 +1,16 @@
+# Input parameters for PMM.py
+# pore = 0, solid = 1
+
+filename = P01_segmented_REV_700_123_Segmented_Laporan.raw
+filesize_x = 700        # Voxels
+filesize_y = 700         
+filesize_z = 700         
+
+resolution = 8      # Microns per voxel
+sigma =   480             # Interfacial tension (mN/m)
+theta = 40                # Contact angle (degrees), limited to below 60
+num_threads = 8          # Number of CPU cores to use
+kernel_search = False    # true: search for kernel size using starting_sat; false: start from
+starting_kernel = 25     # used only if kernel_search=false
+starting_sat = 0.95      # used only if kernel_search=true
+visualization = true     # true: save .RAW fluid distribution per saturation step, false: skip saving
